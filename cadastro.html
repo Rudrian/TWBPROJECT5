@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro TWB</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6B2A7F;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .container {
+            background-color: #8E3D9E;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .container img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .container h1 {
+            margin-bottom: 20px;
+        }
+
+        .container input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #34495e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background-color: #2c3e50;
+        }
+
+        .container p {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="https://im.ge/i/1000353061.VGcAmL">
+            <img src="https://i.im.ge/2024/08/01/VGcAmL.1000353061.jpeg" alt="Logo">
+        </a>
+        <h1>Cadastro TWB</h1>
+        <form>
+
+    <input type="text" placeholder="Nome completo" id="nome">
+    <input type="text" placeholder="Login" id="login">
+    <input type="text" placeholder="Senha" id="senha">
+    <input type="submit" onclick="cadastrar(); return false;">
+
+
+    <script>
+      function cadastrar() {
+        var nome = document.getElementById('nome').value;
+        var login = document.getElementById('login').value;
+        var senha = document.getElementById('senha').value;
+        
+        localStorage.setItem('nome', nome);
+        localStorage.setItem('login', login);
+        localStorage.setItem('senha', senha);
+
+        alert("Cadastro realizado com sucesso!");
+
+        location.href = "index.html";
+      }
+    </script>
+
+</body>
+
+</html>
